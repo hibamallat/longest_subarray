@@ -1,12 +1,5 @@
 binary_list = []
 
-def longest_subarray(array):
-
-
-
-
-    return 
-
 for i in range (10):
     num_binary = int(input("Enter a binary number: "))
     if num_binary == 0 or num_binary == 1:
@@ -18,5 +11,3 @@ for i in range (10):
         
 
 print("", binary_list)
-
-print("", longest_subarray(binary_list))

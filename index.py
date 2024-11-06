@@ -1,4 +1,4 @@
-binary_list = [] #[1,1,1,0]
+binary_numbers = [] #[1,1,1,0]
 
 def longest_subarray(array):
     max_length = 0
@@ -15,20 +15,20 @@ def longest_subarray(array):
                 count_ones += 1
 
             if count_zeros == count_ones:
-                subarray_length = j - i + 1
-                max_length = max(max_length, subarray_length)
+                balanced_length = j - i + 1
+                max_length = max(max_length, balanced_length)
 
     return max_length
 
 for i in range (10):
-    num_binary = int(input("Enter a binary number: "))
+    num_binary = int(input("Enter a binary number:(Enter -1 to stop) "))
     if num_binary == 0 or num_binary == 1:
-        binary_list.append(num_binary)
+        binary_numbers.append(num_binary)
     elif num_binary == -1:
         break
     else:
         print("The number should be binary")
         
-print("The original list:", binary_list)
-print("Length = ", longest_subarray(binary_list)) #length = 2  
+print("The original list:", binary_numbers)
+print("Length of longest balanced subarray: ", longest_subarray(binary_numbers)) #length = 2  
 

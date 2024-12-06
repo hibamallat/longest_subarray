@@ -15,7 +15,7 @@ def longest_subarray(array):
                 count_ones += 1
 
             # If the subarray has equal 0s and 1s, check its length
-            if count_zeros == count_ones:
+            if count_zeros == count_ones and array[i] != array[i+1]:
                 length = j - i + 1
 
                 # Update max_length if the current subarray is the longest found
